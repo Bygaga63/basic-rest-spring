@@ -5,9 +5,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+
+//эта аннотация говорит о том, что все методы которые находятся внутри этого класса будут применятся для каждого контроллера
 @ControllerAdvice
 public class CustomerRestExceptionHandler {
 
+    //пример перехвата одной ошибки
     @ExceptionHandler
     public ResponseEntity<CustomerErrorResponse> handleException(CustomerNotFoundExeption exc){
         CustomerErrorResponse errorResponse = new CustomerErrorResponse(
@@ -19,6 +22,7 @@ public class CustomerRestExceptionHandler {
     }
 
 
+    //пример перехвата неизвестной ошибки
     @ExceptionHandler
     public ResponseEntity<CustomerErrorResponse> handleException(Exception exc){
         CustomerErrorResponse errorResponse = new CustomerErrorResponse(

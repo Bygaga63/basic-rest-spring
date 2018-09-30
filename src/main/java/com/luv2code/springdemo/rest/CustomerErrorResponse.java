@@ -1,5 +1,6 @@
 package com.luv2code.springdemo.rest;
 
+//обычный класс, который мы будем возвращать при ошибках
 public class CustomerErrorResponse{
     private int status;
     private String message;

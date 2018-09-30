@@ -1,5 +1,6 @@
 package com.luv2code.springdemo.rest;
 
+//с помощью этого класса выбрасываются ошибки
 public class CustomerNotFoundExeption extends RuntimeException {
 
     public CustomerNotFoundExeption() {
